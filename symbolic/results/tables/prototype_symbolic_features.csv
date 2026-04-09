@@ -1,0 +1,2 @@
+piece_id,source_name,melody_pitch_range,melody_step_ratio,rhythm_note_density,rhythm_duration_entropy,harmony_chord_change_rate,voice_leading_contrary_motion_ratio,form_repetition_ratio
+demo_bach_chorale,demo_bach_chorale.musicxml,14.0,0.68,1.25,1.73,0.42,0.37,0.21

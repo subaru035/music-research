@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "symbolic-lab"
+version = "0.1.0"
+description = "Prototype symbolic music analysis scaffold"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+research = [
+  "music21>=9.1",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "umap-learn>=0.5",
+]
+
+[project.scripts]
+symbolic-prototype = "symbolic_lab.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

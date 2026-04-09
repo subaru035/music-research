@@ -1,0 +1,2 @@
+track_id,source_name,tempo_estimate,onset_density,spectral_centroid_mean,spectral_bandwidth_mean,mfcc_1_mean,rms_energy_mean,structure_novelty_peak_count
+demo_vocaloid_clip,demo_vocaloid_clip.wav,128.0,3.2,2460.0,1890.0,-142.0,0.18,5.0
