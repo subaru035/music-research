@@ -6,7 +6,8 @@ This report was generated from the current prototype pipeline.
 
 - Rows generated: 1
 - Mode: prototype scaffold
-- Real feature extraction with music21 should replace placeholder values next.
+- Current features are computed from demo note events that illustrate the extraction route.
+- Replace the demo note-event builder with a music21 parser next.
 
 ## Next steps
 

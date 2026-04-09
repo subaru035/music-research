@@ -1,0 +1,20 @@
+列名,内部キー,領域,層,観測単位,単位,意味,計算ルート
+曲ID,piece_id,識別,記載済み,piece,text,曲ごとの識別子です。,入力ファイル名などから安定した ID を作ります。
+元ファイル名,source_name,識別,記載済み,piece,text,入力に使った元ファイル名です。,読み込んだファイルの名前をそのまま保持します。
+特徴量ソース,feature_source,識別,記載済み,piece,text,どの抽出系で作られた特徴量行かを示します。,demo か music21 実装かなどの系統を記録します。
+音符数,event_note_count,イベント,記載済み,piece,count,曲に含まれる音符イベントの総数です。,正規化済み音符イベント列の長さを数えます。
+パート数,voice_part_count,声部,記載済み,piece,count,曲内で区別されたパートや声部の数です。,part_id の種類数を数えます。
+全体音域,pitch_overall_range,音高,導出,piece,semitone,曲全体の最高音と最低音の差です。,全音符の pitch から max - min を取ります。
+平均音高,pitch_mean,音高,導出,piece,midi_pitch,曲全体での音高平均です。,全音符の pitch の平均を取ります。
+音高ばらつき,pitch_std,音高,導出,piece,midi_pitch,音高の散らばり具合です。,全音符の pitch の標準偏差を計算します。
+主旋律音域,melody_pitch_range,旋律,導出,part,semitone,主旋律系列の最高音と最低音の差です。,現行テンプレでは soprano パートを主旋律として計算します。
+主旋律平均音程幅,melody_mean_interval,旋律,導出,part,semitone,主旋律の隣接音どうしの平均距離です。,主旋律系列の隣接 pitch 差の絶対値平均を取ります。
+主旋律順次進行率,melody_step_ratio,旋律,導出,part,ratio,主旋律で 2 半音以内の進行が占める割合です。,隣接音程のうち 2 半音以内の件数比率を計算します。
+音符密度,rhythm_note_density,リズム,導出,piece,notes_per_time,単位時間あたりの音符数です。,音符数を曲長で割ります。
+平均音価,rhythm_mean_duration,リズム,導出,piece,duration_unit,音価の平均です。,全音符の duration の平均を取ります。
+音価エントロピー,rhythm_duration_entropy,リズム,導出,piece,entropy,音価の種類の多様さです。,音価分布の Shannon entropy を計算します。
+発音開始点数,vertical_onset_count,垂直性,導出,piece,count,異なる onset の数です。,onset ごとにまとめたスライス数を数えます。
+同時発音率,vertical_simultaneity_ratio,垂直性,導出,onset,ratio,2 音以上が同時に鳴る onset の割合です。,onset スライスのうち複数音を含むものの比率を取ります。
+平均発声音部数,texture_mean_active_voices,テクスチャ,導出,onset,count,1 onset あたり平均で何声部鳴るかです。,各 onset の発声音数を平均します。
+最大発声音部数,texture_max_active_voices,テクスチャ,導出,onset,count,同時に鳴った声部数の最大値です。,各 onset の発声音数の最大を取ります。
+ピッチクラス種類数,tonality_pitch_class_variety,調性,推定前段階,piece,count,12 音クラス上で使われた種類数です。,pitch % 12 の種類数を数えます。

@@ -5,7 +5,7 @@ def test_build_rows_returns_expected_columns() -> None:
     rows = build_rows()
     assert rows
     first = rows[0]
-    assert "piece_id" in first
-    assert "melody_pitch_range" in first
-    assert "harmony_chord_change_rate" in first
-
+    assert "曲ID" in first
+    assert "主旋律音域" in first
+    assert "同時発音率" in first
+    assert "ピッチクラス種類数" in first
