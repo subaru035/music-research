@@ -1,10 +1,9 @@
-# Papers
+﻿# 論文メモ
 
-Store literature notes here.
+文献メモや先行研究の整理をここに置きます。
 
-Suggested convention:
+おすすめの書き方:
 
-- one markdown file per paper
-- record dataset, method, feature set, and evaluation
-- note whether the paper is more useful for `symbolic` or `audio`
-
+- 論文 1 本につき markdown 1 ファイル
+- データセット、手法、特徴量、評価方法を記録する
+- `symbolic` と `audio` のどちらに特に関係するかを添える

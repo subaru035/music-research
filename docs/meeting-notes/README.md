@@ -1,13 +1,12 @@
-# Meeting Notes
+﻿# ミーティングメモ
 
-Use this directory as a lightweight decision log.
+ここは軽い意思決定ログとして使います。
 
-Recommended sections per note:
+各メモにあると便利な項目:
 
-- date
-- decision
-- reason
-- impact on `symbolic`
-- impact on `audio`
-- next action
-
+- 日付
+- 決めたこと
+- その理由
+- `symbolic` への影響
+- `audio` への影響
+- 次にやること

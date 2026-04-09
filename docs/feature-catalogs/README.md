@@ -1,13 +1,12 @@
-# Feature Catalogs
+﻿# 特徴量カタログ
 
-This directory is the shared bridge between the two projects.
+このディレクトリは、`symbolic` と `audio` をつなぐ共有メモ置き場です。
 
-Keep:
+ここに置くもの:
 
-- candidate features
-- rough definitions
-- why the feature may matter musically
-- how the feature might be interpreted in analysis
+- 特徴量候補
+- 大まかな定義
+- 音楽的にその特徴がなぜ重要そうか
+- 分析結果としてどう解釈できそうか
 
-Avoid placing implementation details here. Those stay inside each project.
-
+実装の詳細は書かず、各プロジェクト側で管理します。

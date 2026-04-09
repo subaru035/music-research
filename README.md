@@ -1,19 +1,19 @@
-# music-research
+﻿# music-research
 
-Shared parent workspace for two related but intentionally separated projects:
+記譜ベース分析と音源ベース分析を、意図的に分離して進めるための親ワークスペースです。
 
-- `symbolic/` for score-oriented analysis based on MIDI, MusicXML, and other notation-derived data.
-- `audio/` for recording-oriented analysis based on wav, mp3, and similar audio formats.
+- `symbolic/`: MIDI、MusicXML などの楽譜的データを扱うプロジェクト
+- `audio/`: wav、mp3 などの録音音源を扱うプロジェクト
 
-The parent directory keeps only lightweight shared artifacts:
+親ディレクトリでは、次のような軽い共有物だけを管理します。
 
-- research notes
-- comparison viewpoints
-- interpretation rules for results
+- 研究メモ
+- 比較観点
+- 結果の見方や解釈ルール
 
-Code, dependencies, and feature engineering stay project-local on purpose.
+コード、依存環境、特徴量設計は各子プロジェクト側で分離して保持します。
 
-## Workspace layout
+## 構成
 
 ```text
 music-research/
@@ -27,18 +27,18 @@ music-research/
   audio/
 ```
 
-## Shared docs
+## 共有ドキュメント
 
-- `docs/theme-notes/` keeps high-level research framing.
-- `docs/papers/` keeps paper notes and reading summaries.
-- `docs/feature-catalogs/` keeps cross-project feature inventories.
-- `docs/meeting-notes/` keeps decision logs.
+- `docs/theme-notes/`: 研究テーマ全体の整理
+- `docs/papers/`: 論文メモや読書メモ
+- `docs/feature-catalogs/`: 両プロジェクトで共有したい特徴量の棚卸し
+- `docs/meeting-notes/`: 打ち合わせや意思決定の記録
 
-## Quick start
+## クイックスタート
 
-Each child project can be developed independently.
+`symbolic` と `audio` は独立して開発できます。
 
-### Symbolic prototype
+### symbolic プロトタイプ
 
 ```powershell
 Set-Location .\symbolic
@@ -46,7 +46,7 @@ $env:PYTHONPATH = "src"
 python -m symbolic_lab
 ```
 
-### Audio prototype
+### audio プロトタイプ
 
 ```powershell
 Set-Location .\audio
@@ -54,5 +54,4 @@ $env:PYTHONPATH = "src"
 python -m audio_lab
 ```
 
-Both prototype commands generate one CSV table and one short markdown report under `results/`.
-
+どちらも `results/` 配下に、特徴量 CSV と簡単なレポートを出力します。

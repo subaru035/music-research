@@ -1,49 +1,48 @@
-# audio
+﻿# audio
 
-Prototype project for recording-based music analysis.
+録音音源を対象にした音楽分析プロジェクトです。
 
-## Goal
+## 目的
 
-Build a reusable feature-extraction and analysis foundation for:
+次のような研究や探索に使える、再利用可能な音響特徴抽出・分析基盤を作ることを目指します。
 
-- clustering songs by sound and mood
-- exploring genre and atmosphere
-- comparing tracks for mashup compatibility
-- investigating Vocaloid-oriented audio patterns
+- 楽曲のまとまりやクラスタの探索
+- ジャンル感や雰囲気の分析
+- 類似曲比較やマッシュアップ相性の検討
+- ボカロ曲を含む音源ベース研究
 
-## Current scope
+## 現在のスコープ
 
-- focus on basic `librosa`-style audio features later
-- start with unsupervised exploration
-- keep the design usable for both research and hobby workflows
-- postpone source separation and large models
+- 当面は `librosa` 系の基本音響特徴を想定
+- まずは教師なし寄りの探索から始める
+- 研究用途にも趣味用途にも流用しやすい設計にする
+- 音源分離や大規模モデルは後回しにする
 
-## Input
+## 入力
 
 - wav
 - mp3
-- other common audio formats when needed
+- 必要に応じてその他の一般的な音源形式
 
-## Output
+## 出力
 
-- one-row-per-track acoustic feature tables
-- visualization support
-- clustering support
-- a basis for similarity and compatibility scoring
+- 1 曲 1 行の音響特徴量表
+- 可視化やクラスタ分析の土台
+- 類似曲比較や相性評価につながる基盤
 
-## Prototype status
+## 現在のプロトタイプ
 
-This scaffold currently provides:
+この雛形には次のものが入っています。
 
-- project-local package structure
-- placeholder acoustic feature catalog
-- a minimal CLI that scans `data/raw/`
-- a dummy feature table writer
-- a short markdown report generator
+- プロジェクト専用のパッケージ構成
+- 仮の音響特徴カタログ
+- `data/raw/` を走査する最小 CLI
+- ダミーの特徴量テーブル出力
+- 簡易レポート生成
 
-The placeholder pipeline is intentionally thin so the real `librosa` implementation can replace feature stubs without changing the project layout.
+今は形だけの実装なので、あとから `librosa` ベースの本実装に差し替えやすい構成を優先しています。
 
-## Quick start
+## クイックスタート
 
 ```powershell
 Set-Location .\audio
@@ -51,8 +50,7 @@ $env:PYTHONPATH = "src"
 python -m audio_lab
 ```
 
-Generated files:
+生成されるファイル:
 
 - `results/tables/prototype_audio_features.csv`
 - `results/reports/prototype_audio_report.md`
-

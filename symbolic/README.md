@@ -1,49 +1,49 @@
-# symbolic
+﻿# symbolic
 
-Prototype project for notation-based music analysis.
+楽譜・記譜データを対象にした音楽分析プロジェクトです。
 
-## Goal
+## 目的
 
-Build a reusable feature-extraction and analysis foundation for:
+次のような研究に使える、再利用可能な特徴量抽出・分析基盤を作ることを目指します。
 
-- composer style analysis
-- historical style comparison
-- Bach chorale structure analysis
-- interpretation aligned with music theory
+- 作曲者らしさの分析
+- 時代様式の比較
+- バッハ・コラールなどの構造分析
+- 音楽理論と結びついた解釈
 
-## Current scope
+## 現在のスコープ
 
-- focus on `music21`-friendly symbolic workflows later
-- validate with existing Bach chorale material first
-- no generation
-- no deep learning as the main topic
+- 当面は `music21` を中心にした symbolic 解析を想定
+- まずは既存のバッハ・コラールを検証対象にする
+- 音楽生成は扱わない
+- 深層学習は主題にしない
 
-## Input
+## 入力
 
 - MIDI
 - MusicXML
-- other score-derived symbolic files if needed
+- 必要に応じてその他の楽譜由来データ
 
-## Output
+## 出力
 
-- one-row-per-piece feature tables
-- distribution and comparison summaries
-- PCA, UMAP, and classification support later
-- reusable extraction pipeline
+- 1 曲 1 行の特徴量表
+- 分布確認や比較のための集計結果
+- 将来的な PCA、UMAP、分類補助の土台
+- 再利用可能な抽出パイプライン
 
-## Prototype status
+## 現在のプロトタイプ
 
-This scaffold currently provides:
+この雛形には次のものが入っています。
 
-- project-local package structure
-- placeholder feature catalog
-- a minimal CLI that scans `data/raw/`
-- a dummy feature table writer
-- a short markdown report generator
+- プロジェクト専用のパッケージ構成
+- 仮の特徴量カタログ
+- `data/raw/` を走査する最小 CLI
+- ダミーの特徴量テーブル出力
+- 簡易レポート生成
 
-The placeholder pipeline is intentionally thin so the real `music21` implementation can replace feature stubs without changing the project layout.
+今は形だけの実装なので、あとから `music21` ベースの本実装に差し替えやすい構成を優先しています。
 
-## Quick start
+## クイックスタート
 
 ```powershell
 Set-Location .\symbolic
@@ -51,8 +51,7 @@ $env:PYTHONPATH = "src"
 python -m symbolic_lab
 ```
 
-Generated files:
+生成されるファイル:
 
 - `results/tables/prototype_symbolic_features.csv`
 - `results/reports/prototype_symbolic_report.md`
-

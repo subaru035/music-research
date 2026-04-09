@@ -1,8 +1,7 @@
-# Theme Notes
+﻿# テーマメモ
 
-Use this directory for broad research framing:
+このディレクトリには、研究全体の大きな方向性をまとめます。
 
-- why this research matters
-- what each subproject should answer
-- how symbolic and audio findings complement each other
-
+- なぜこの研究をやるのか
+- 各サブプロジェクトで何を明らかにしたいのか
+- `symbolic` と `audio` の結果がどう補い合うのか
